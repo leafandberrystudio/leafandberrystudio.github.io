@@ -9,6 +9,7 @@
                 <router-link to="/about">About</router-link> |
                 <router-link to="/contact">Contact</router-link>
             </div>
+            <v-divider></v-divider>
             <router-view/>
         </v-main>
     </v-app>

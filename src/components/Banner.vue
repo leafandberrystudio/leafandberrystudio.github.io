@@ -1,13 +1,13 @@
 <template>
     <div id="banner">
-        <v-card class="d-flex justify-center mb-6" max-width="2288">
+        <v-card class="justify-center" max-width="2288">
             <v-img
                 class="white--text"
                 max-height="374"
                 max-width="2288"
                 src="../assets/header.webp"
             >
-                <v-card-text>Leaf & Berry Studio</v-card-text>
+                <v-card-title class="justify-center">Leaf & Berry Studio</v-card-title>
             </v-img>
         </v-card>
     </div>
