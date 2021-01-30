@@ -1,124 +1,84 @@
 <template>
     <div class="home">
-        <h1>Creating one-of-a-kind accessories with nature's bounty!</h1>
-        <v-divider></v-divider>
-        <v-container>
-            <v-row no-gutters>
-                <v-col>
-                    <v-card class="pa-2" tile to="/gallery">
-                        <v-img
-                            class="white--text"
-                            max-height="241"
-                            max-width="241"
-                            src="../assets/ecoprints/menu.webp"
-                        >
-                        </v-img>
-                        <v-card-text>Eco Prints</v-card-text>
-                    </v-card>
-                </v-col>
-                <v-col>
-                    <v-card class="pa-2" tile to="/gallery">
-                        <v-img
-                            class="white--text"
-                            max-height="241"
-                            max-width="241"
-                            src="../assets/mediumprints/menu.webp"
-                        >
-                        </v-img>
-                        <v-card-text>Medium Prints</v-card-text>
-                    </v-card>
-                </v-col>
-                <v-col>
-                    <v-card class="pa-2" tile to="/gallery">
-                        <v-img
-                            class="white--text"
-                            max-height="241"
-                            max-width="241"
-                            src="../assets/devorevelvet/menu.webp"
-                        >
-                        </v-img>
-                        <v-card-text>Devore Velvet</v-card-text>
-                    </v-card>
-                </v-col>
-                <v-col>
-                    <v-card class="pa-2" tile to="/gallery">
-                        <v-img
-                            class="white--text"
-                            max-height="241"
-                            max-width="241"
-                            src="../assets/sunprints/menu.webp"
-                        >
-                        </v-img>
-                        <v-card-text>Sun Prints</v-card-text>
-                    </v-card>
-                </v-col>
-            </v-row>
+        <div class="d-flex flex-wrap" max-width="1500">
+            <h1 class="justify-center mx-auto">
+                Creating one-of-a-kind accessories with nature's bounty!
+            </h1>
+        </div>
+        <v-spacer />
 
-            <v-row no-gutters>
-                <v-col>
-                    <v-card class="pa-2" tile to="/gallery">
-                        <v-img
-                            class="white--text"
-                            max-height="241"
-                            max-width="241"
-                            src="../assets/cyanotypes/menu.webp"
-                        >
-                        </v-img>
-                        <v-card-text>Cyanotypes</v-card-text>
-                    </v-card>
-                </v-col>
-                <v-col>
-                    <v-card class="pa-2" tile to="/gallery">
-                        <v-img
-                            class="white--text"
-                            max-height="241"
-                            max-width="241"
-                            src="../assets/shibori/menu.webp"
-                        >
-                        </v-img>
-                        <v-card-text>Shibori</v-card-text>
-                    </v-card>
-                </v-col>
-                <v-col>
-                    <v-card class="pa-2" tile to="/gallery">
-                        <v-img
-                            class="white--text"
-                            max-height="241"
-                            max-width="241"
-                            src="../assets/jewelry/menu.webp"
-                        >
-                        </v-img>
-                        <v-card-text>Jewelry</v-card-text>
-                    </v-card>
-                </v-col>
-                <v-col>
-                    <v-card class="pa-2" tile to="/gallery">
-                        <v-img
-                            class="white--text"
-                            max-height="241"
-                            max-width="241"
-                            src="../assets/knitting/menu.webp"
-                        >
-                        </v-img>
-                        <v-card-text>Knitting</v-card-text>
-                    </v-card>
-                </v-col>
-            </v-row>
-
-            <v-row no-gutters style="width: 241px;">
-                <v-col>
-                    <v-card class="pa-2" tile to="/gallery">
-                        <v-img
-                            class="white--text"
-                            max-height="241"
-                            max-width="241"
-                            src="../assets/batik/menu.webp"
-                        >
-                        </v-img>
-                        <v-card-text>Batik</v-card-text>
-                    </v-card>
-                </v-col>
-            </v-row>
+        <v-container class="d-flex flex-wrap" max-width="1500">
+            <div v-for="item in items" :key="item.route">
+                <v-card
+                    class="pa-2"
+                    tile
+                    max-width="241"
+                    v-bind:to="item.route"
+                >
+                    <v-img
+                        max-height="241"
+                        max-width="241"
+                        v-bind:src="item.source"
+                    ></v-img>
+                </v-card>
+                <v-card-text>{{ item.name }}</v-card-text>
+            </div>
         </v-container>
     </div>
 </template>
+
+<script>
+export default {
+    name: 'Home',
+
+    data: () => ({
+        items: [
+            {
+                route: '/ecoprints',
+                name: 'Eco Prints',
+                source: require('../assets/ecoprints/menu.webp'),
+            },
+            {
+                route: '/mediumprints',
+                name: 'Medium Prints',
+                source: require('../assets/mediumprints/menu.webp'),
+            },
+            {
+                route: '/devorevelvet',
+                name: 'Devore Velvet',
+                source: require('../assets/devorevelvet/menu.webp'),
+            },
+            {
+                route: '/sunprints',
+                name: 'Sun Prints',
+                source: require('../assets/sunprints/menu.webp'),
+            },
+            {
+                route: '/cyanotypes',
+                name: 'Cyanotypes',
+                source: require('../assets/cyanotypes/menu.webp'),
+            },
+            {
+                route: '/shibori',
+                name: 'Shibori',
+                source: require('../assets/shibori/menu.webp'),
+            },
+            {
+                route: '/jewelry',
+                name: 'Jewelry',
+                source: require('../assets/jewelry/menu.webp'),
+            },
+            {
+                route: '/knitting',
+                name: 'Knitting',
+                source: require('../assets/knitting/menu.webp'),
+            },
+            {
+                route: '/batik',
+                name: 'Batik',
+                source: require('../assets/batik/menu.webp'),
+            },
+        ],
+    }),
+};
+</script>

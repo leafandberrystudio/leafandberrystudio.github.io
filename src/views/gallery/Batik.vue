@@ -1,5 +1,25 @@
 <template>
-  <div class="gallery">
-    <h1>This is a Batik page</h1>
-  </div>
+    <div class="gallery">
+        <v-row>
+            <v-col v-for="n in 9" :key="n" class="d-flex child-flex" cols="4">
+                <v-img
+                    :src="`../../assets/batik/gallery-${n}.webp`"
+                    class="grey lighten-2"
+                >
+                    <template v-slot:placeholder>
+                        <v-row
+                            class="fill-height ma-0"
+                            align="center"
+                            justify="center"
+                        >
+                            <v-progress-circular
+                                indeterminate
+                                color="grey lighten-5"
+                            ></v-progress-circular>
+                        </v-row>
+                    </template>
+                </v-img>
+            </v-col>
+        </v-row>
+    </div>
 </template>
