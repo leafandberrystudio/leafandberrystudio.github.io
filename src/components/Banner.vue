@@ -1,22 +1,23 @@
 <template>
-    <div id="banner">
-        <v-card class="justify-center mx-auto" max-width="1500">
-            <v-img
-                class="white--text"
-                max-height="374"
-                max-width="2288"
-                src="../assets/header.webp"
-            >
-                <div class="d-flex flex-column mx-auto">
-                    <h1 class="mx-auto">Leaf & Berry Studio</h1>
-                </div>
-            </v-img>
-        </v-card>
-    </div>
+  <v-row align="center" justify="center">
+    <v-spacer />
+    <v-col cols="8" >
+        <v-img
+        class="white--text"
+        max-height="374"
+        max-width="2288"
+        src="../assets/header.webp"
+      >
+      <h1 class="text-center white--text">Leaf & Berry Studio</h1>
+      </v-img>
+    </v-col>
+    <v-spacer />
+  </v-row>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style lang="css"></style>
+<style lang="css">
+</style>

@@ -1,13 +1,19 @@
 <template>
-    <div id="banner">
-        <v-card class="justify-center" max-width="2288">
-            <v-card-title class="justify-left">Contact:</v-card-title>
-            <v-card-text>
-                Julie Mitchell
-                leafandberrystudio@gmail.com
-            </v-card-text>
-        </v-card>
-    </div>
+  <v-row align="center" justify="center">
+    <v-spacer />
+    <v-col cols="8" style="background: #e8e2d2">
+      <v-row align="center" justify="left">
+        <v-col cols="8"> Contact: </v-col>
+      </v-row>
+      <v-row align="center" justify="left">
+        <v-col cols="8"> Julie Mitchell leafandberrystudio@gmail.com </v-col>
+      </v-row>
+      <v-row align="center" justify="left">
+        <v-col cols="8"> © 2021 by Leaf & Berry. </v-col>
+      </v-row>
+    </v-col>
+    <v-spacer />
+  </v-row>
 </template>
 
 <script>

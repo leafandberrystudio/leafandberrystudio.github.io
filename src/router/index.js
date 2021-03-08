@@ -13,47 +13,47 @@ const routes = [
   {
     path: '/batik',
     name: 'Batik',
-    component: () => import(/* webpackChunkName: "gallery" */ '../views/gallery/Batik.vue')
+    component: () => import(/* webpackChunkName: "batik" */ '../views/gallery/Batik.vue')
   },
   {
     path: '/cyanotypes',
     name: 'Cyanotypes',
-    component: () => import(/* webpackChunkName: "gallery" */ '../views/gallery/Cyanotypes.vue')
+    component: () => import(/* webpackChunkName: "cyanotypes" */ '../views/gallery/Cyanotypes.vue')
   },
   {
     path: '/devore-velvet',
     name: 'Devore Velvet',
-    component: () => import(/* webpackChunkName: "gallery" */ '../views/gallery/Devorevelvet.vue')
+    component: () => import(/* webpackChunkName: "devore-velvet" */ '../views/gallery/Devorevelvet.vue')
   },
   {
     path: '/eco-prints',
     name: 'Eco Prints',
-    component: () => import(/* webpackChunkName: "gallery" */ '../views/gallery/Ecoprints.vue')
+    component: () => import(/* webpackChunkName: "eco-prints" */ '../views/gallery/Ecoprints.vue')
   },
   {
     path: '/jewelry',
     name: 'Jewelry',
-    component: () => import(/* webpackChunkName: "gallery" */ '../views/gallery/Jewelry.vue')
+    component: () => import(/* webpackChunkName: "jewelry" */ '../views/gallery/Jewelry.vue')
   },
   {
     path: '/knitting',
     name: 'Knitting',
-    component: () => import(/* webpackChunkName: "gallery" */ '../views/gallery/Knitting.vue')
+    component: () => import(/* webpackChunkName: "knitting" */ '../views/gallery/Knitting.vue')
   },
   {
     path: '/medium-prints',
     name: 'Mediium Prints',
-    component: () => import(/* webpackChunkName: "gallery" */ '../views/gallery/Mediumprints.vue')
+    component: () => import(/* webpackChunkName: "medium-prints" */ '../views/gallery/Mediumprints.vue')
   },
   {
     path: '/shibori',
     name: 'Shibori',
-    component: () => import(/* webpackChunkName: "gallery" */ '../views/gallery/Shibori.vue')
+    component: () => import(/* webpackChunkName: "shibori" */ '../views/gallery/Shibori.vue')
   },
   {
     path: '/sun-prints',
     name: 'Sun Prints',
-    component: () => import(/* webpackChunkName: "gallery" */ '../views/gallery/Sunprints.vue')
+    component: () => import(/* webpackChunkName: "sun-prints" */ '../views/gallery/Sunprints.vue')
   },
   {
     path: '/about',
@@ -62,11 +62,6 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
-    path: '/contact',
-    name: 'Contact',
-    component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
   }
 ]
 
