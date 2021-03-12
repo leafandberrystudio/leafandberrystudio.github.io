@@ -37,22 +37,22 @@ export default {
   data: () => ({
     items: [
       {
-        route: "/ecoprints",
+        route: "/eco-prints",
         name: "Eco Prints",
         source: require("../assets/ecoprints/menu.webp"),
       },
       {
-        route: "/mediumprints",
+        route: "/medium-prints",
         name: "Medium Prints",
         source: require("../assets/mediumprints/menu.webp"),
       },
       {
-        route: "/devorevelvet",
+        route: "/devore-velvet",
         name: "Devore Velvet",
         source: require("../assets/devorevelvet/menu.webp"),
       },
       {
-        route: "/sunprints",
+        route: "/sun-prints",
         name: "Sun Prints",
         source: require("../assets/sunprints/menu.webp"),
       },

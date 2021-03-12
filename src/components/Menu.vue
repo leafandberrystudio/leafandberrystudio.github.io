@@ -42,19 +42,19 @@ export default {
   data: () => ({
     gallery: [
       {
-        route: "/ecoprints",
+        route: "/eco-prints",
         name: "Eco Prints",
       },
       {
-        route: "/mediumprints",
+        route: "/medium-prints",
         name: "Medium Prints",
       },
       {
-        route: "/devorevelvet",
+        route: "/devore-velvet",
         name: "Devore Velvet",
       },
       {
-        route: "/sunprints",
+        route: "/sun-prints",
         name: "Sun Prints",
       },
       {
