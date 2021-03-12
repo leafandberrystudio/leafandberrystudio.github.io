@@ -21,10 +21,10 @@
                 Gallery
               </v-btn>
             </template>
-            <v-list v-for="item in gallery" :key="item.route">
+            <v-list v-for="item in gallery" :key="item.id">
               <v-list-item>
                 <v-btn v-bind:to="item.route" style="background: #dfd9c8">{{
-                  item.name
+                  item.title
                 }}</v-btn>
               </v-list-item>
             </v-list>
@@ -38,46 +38,11 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
+
 export default {
-  data: () => ({
-    gallery: [
-      {
-        route: "/eco-prints",
-        name: "Eco Prints",
-      },
-      {
-        route: "/medium-prints",
-        name: "Medium Prints",
-      },
-      {
-        route: "/devore-velvet",
-        name: "Devore Velvet",
-      },
-      {
-        route: "/sun-prints",
-        name: "Sun Prints",
-      },
-      {
-        route: "/cyanotypes",
-        name: "Cyanotypes",
-      },
-      {
-        route: "/shibori",
-        name: "Shibori",
-      },
-      {
-        route: "/jewelry",
-        name: "Jewelry",
-      },
-      {
-        route: "/knitting",
-        name: "Knitting",
-      },
-      {
-        route: "/batik",
-        name: "Batik",
-      },
-    ],
+   computed: mapState({
+    gallery: 'galleries',
   }),
 };
 </script>

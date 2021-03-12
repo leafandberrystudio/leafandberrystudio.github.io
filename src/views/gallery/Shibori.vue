@@ -1,205 +1,33 @@
 
 <template>
   <v-container fill-height fluid>
-    <v-row align="center" justify="center">
-      <div id="comp-jx6i23i9" class="_1Z_nJ" data-testid="richTextElement">
-        <h2 class="font_2" style="font-size: 29px; text-align: center">
-          <span style="color: #2f2e2e"
-            ><span style="font-size: 29px"
-              ><span
-                style="
-                  font-family: wfont_eb4b72_afe4c0ec08c843ddaa502514031ba9bf,
-                    wf_afe4c0ec08c843ddaa5025140, orig_prida_61;
-                "
-                >Shibori</span
-              ></span
-            ></span
-          >
-        </h2>
-
-        <h2 class="font_2" style="font-size: 17px; text-align: center">
-          <span style="color: #2f2e2e"
-            ><span style="font-size: 17px"
-              ><span style="font-family: cinzel, serif"
-                >Silk Scarves Hand Dyed&nbsp;using Traditional Japanese
-                Techniques Involving&nbsp;Carefully Tying and
-                Folding&nbsp;Fabric.</span
-              ></span
-            ></span
-          >
-        </h2>
-      </div>
-    </v-row>
-
-    <v-row align="center" justify="center">
-      <div id="comp-jyf8k77g" class="_1Z_nJ" data-testid="richTextElement">
-        <p class="font_8" style="font-size: 23px; line-height: 1.3em">
-          <span style="font-size: 23px"
-            ><span style="color: #2f2e2e"
-              ><span style="font-family: cinzel, serif"
-                ><span style="letter-spacing: 0.03em">Styles</span></span
-              ></span
-            ></span
-          >
-        </p>
-      </div>
-
-      <div id="comp-jx6if70i" class="_1Z_nJ" data-testid="richTextElement">
-        <p class="font_8" style="font-size: 18px; line-height: 1.3em">
-          <span style="font-size: 18px"
-            ><span style="color: #2f2e2e"
-              ><span style="font-family: cinzel, serif"
-                ><span style="letter-spacing: 0.03em"
-                  >Arashi Shibori:&nbsp;Pole-Wrapped</span
-                ></span
-              ></span
-            ></span
-          >
-        </p>
-      </div>
-
-      <div id="comp-jx6ih8nk" class="_1Z_nJ" data-testid="richTextElement">
-        <p class="font_8" style="font-size: 18px; line-height: 1.3em">
-          <span style="font-size: 18px"
-            ><span style="color: #2f2e2e"
-              ><span style="font-family: cinzel, serif"
-                ><span style="letter-spacing: 0.03em"
-                  >IntaJime Shibori: Geometric Folding</span
-                ></span
-              ></span
-            ></span
-          >
-        </p>
-      </div>
-
-      <div id="comp-jx6iiaez" class="_1Z_nJ" data-testid="richTextElement">
-        <p class="font_8" style="font-size: 18px; line-height: 1.3em">
-          <span style="font-size: 18px"
-            ><span style="color: #2f2e2e"
-              ><span style="font-family: cinzel, serif"
-                ><span style="letter-spacing: 0.03em">Natural Dyes</span></span
-              ></span
-            ></span
-          >
-        </p>
-      </div>
-    </v-row>
-
-    <v-row>
-      <swiper class="swiper" :options="swiperOption">
-        <swiper-slide v-for="item in images" :key="item.route">
-          <v-card class="mx-auto" tile max-width="200">
-            <v-img :src="item.imageSrc" class="grey lighten-2">
-              <template v-slot:placeholder>
-                <v-row class="fill-height ma-0" align="center" justify="center">
-                  <v-progress-circular
-                    indeterminate
-                    color="grey lighten-5"
-                  ></v-progress-circular>
-                </v-row>
-              </template>
-            </v-img>
-          </v-card>
-        </swiper-slide>
-        <div class="swiper-pagination" slot="pagination"></div>
-        <div class="swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-button-next" slot="button-next"></div>
-      </swiper>
-    </v-row>
+    <gallery-header :title="galleryItem.title" :subtitle="galleryItem.subtitle" />
+    <gallery-description :description="galleryItem.arashiDescription" />
+    <gallery-images :images="galleryItem.arashiImages" rows="1" />
+    <gallery-description :description="galleryItem.intajimeDescription" />
+    <gallery-images :images="galleryItem.intajimeImages" rows="1" />
+    <gallery-description :description="galleryItem.naturalDescription" />
+    <gallery-images :images="galleryItem.naturalImages" rows="1" />
   </v-container>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
+import GalleryHeader from "../../components/gallery/GalleryHeader"
+import GalleryDescription from "../../components/gallery/GalleryDescription"
+import GalleryImages from "../../components/gallery/GalleryImages"
 
 export default {
-  name: "swiper-example-slides-per-column",
-  title: "Multi row slides layout",
+  name: "shibori",
+  title: "Shibori",
   components: {
-    Swiper,
-    SwiperSlide,
+    GalleryHeader,
+    GalleryDescription,
+    GalleryImages,
   },
-  data() {
-    return {
-      images: [
-        {
-          id: 1,
-          imageSrc: require("../../assets/ecoprints/ecoprints-gallery-1.webp"),
-          title: "Title 1",
-        },
-        {
-          id: 2,
-          imageSrc: require("../../assets/ecoprints/ecoprints-gallery-2.webp"),
-          title: "Title 2",
-        },
-        {
-          id: 3,
-          imageSrc: require("../../assets/ecoprints/ecoprints-gallery-3.webp"),
-          title: "Title 3",
-        },
-        {
-          id: 4,
-          imageSrc: require("../../assets/ecoprints/ecoprints-gallery-4.webp"),
-          title: "Title 4",
-        },
-        {
-          id: 5,
-          imageSrc: require("../../assets/ecoprints/ecoprints-gallery-5.webp"),
-          title: "Title 5",
-        },
-        {
-          id: 6,
-          imageSrc: require("../../assets/ecoprints/ecoprints-gallery-6.webp"),
-          title: "Title 6",
-        },
-        {
-          id: 7,
-          imageSrc: require("../../assets/ecoprints/ecoprints-gallery-7.webp"),
-          title: "Title 7",
-        },
-      ],
-      swiperOption: {
-        slidesPerView: 3,
-        slidesPerColumn: 2,
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      },
-    };
+  computed: {
+    galleryItem() {
+      return this.$store.getters.galleryItem("shibori");
+    },
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.swiper {
-  height: 300px;
-  width: 100%;
-
-  .swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-    font-size: 14px * 1.3 * 2;
-    background-color: #fcfaed;
-  }
-}
-
-.swiper {
-  height: 430px;
-  margin-left: auto;
-  margin-right: auto;
-
-  .swiper-slide {
-    height: 200px;
-  }
-}
-</style>
