@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="sidebar" app>
+    <v-navigation-drawer v-model="sidebar" app disable-resize-watcher>
       <v-list>
         <v-list-item link to="/">
           <v-list-tile-content>Home</v-list-tile-content>

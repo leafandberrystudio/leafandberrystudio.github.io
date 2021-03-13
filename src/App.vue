@@ -1,7 +1,7 @@
 <template>
   <v-app style="background: #fcfaed">
+        <Menu />
     <v-main>
-        <Menu :columns="columns" />
       <v-container fill-height fluid>
         <!-- <Banner :columns="columns" /> -->
         <v-row align="center" justify="center">
@@ -38,7 +38,7 @@ export default {
   mounted() {
     window.onresize = () => {
       this.windowWidth = window.innerWidth;
-      if (this.windowWidth < 500) {
+      if (this.windowWidth < 900) {
         this.columns = 12
       } else {
         this.columns = 8
@@ -47,7 +47,7 @@ export default {
   },
   computed: {
     columns() {
-      if (this.windowWidth < 500) {
+      if (this.windowWidth < 900) {
         return 12
       } else {
         return 8
