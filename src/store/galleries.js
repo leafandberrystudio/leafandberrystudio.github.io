@@ -479,42 +479,137 @@ export default [
       images: [
         {
           id: 1,
-          imageSrc: require("../assets/batik/batik-1.webp"),
+          imageSrc: require("../assets/devorevelvet/devorevelvet-1.webp"),
           title: "Title 1",
         },
         {
           id: 2,
-          imageSrc: require("../assets/batik/batik-2.webp"),
+          imageSrc: require("../assets/devorevelvet/devorevelvet-2.webp"),
           title: "Title 1",
         },
         {
           id: 3,
-          imageSrc: require("../assets/batik/batik-3.webp"),
+          imageSrc: require("../assets/devorevelvet/devorevelvet-3.webp"),
           title: "Title 1",
         },
         {
           id: 4,
-          imageSrc: require("../assets/batik/batik-4.webp"),
+          imageSrc: require("../assets/devorevelvet/devorevelvet-4.webp"),
           title: "Title 1",
         },
         {
           id: 5,
-          imageSrc: require("../assets/batik/batik-5.webp"),
+          imageSrc: require("../assets/devorevelvet/devorevelvet-5.webp"),
           title: "Title 1",
         },
         {
           id: 6,
-          imageSrc: require("../assets/batik/batik-6.webp"),
+          imageSrc: require("../assets/devorevelvet/devorevelvet-6.webp"),
           title: "Title 1",
         },
         {
           id: 7,
-          imageSrc: require("../assets/batik/batik-7.webp"),
+          imageSrc: require("../assets/devorevelvet/devorevelvet-7.webp"),
           title: "Title 1",
         },
         {
           id: 8,
-          imageSrc: require("../assets/batik/batik-8.webp"),
+          imageSrc: require("../assets/devorevelvet/devorevelvet-8.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 9,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-9.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 10,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-10.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 11,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-12.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 13,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-13.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 14,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-14.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 15,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-15.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 16,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-16.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 17,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-17.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 18,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-18.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 19,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-19.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 20,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-20.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 21,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-21.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 22,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-22.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 23,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-23.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 24,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-24.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 25,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-25.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 26,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-26.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 27,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-27.webp"),
+          title: "Title 1",
+        },
+        {
+          id: 28,
+          imageSrc: require("../assets/devorevelvet/devorevelvet-28.webp"),
           title: "Title 1",
         },
       ],
