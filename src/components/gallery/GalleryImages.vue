@@ -1,9 +1,9 @@
 <template>
   <v-row>
-    <swiper class="swiper" :options="swiperOption" :height="swiperHeight">
+    <swiper class="swiper" :options="swiperOption" :style="cssVars">
       <swiper-slide v-for="item in images" :key="item.route">
         <v-card class="mx-auto" tile max-width="200">
-          <v-img :src="item.imageSrc" class="grey lighten-2">
+          <v-img :src="item.imageSrc" style="background: #fcfaed" max-height="200" contain="true">
             <template v-slot:placeholder>
               <v-row class="fill-height ma-0" align="center" justify="center">
                 <v-progress-circular
@@ -42,8 +42,10 @@ export default {
     SwiperSlide,
   },
   computed: {
-    swiperHeight() {
-        return this.rows * 150
+    cssVars() {
+      return {
+        '--height': (this.rows * 250) + 'px'
+      }
     }
   },
   data() {
@@ -68,9 +70,12 @@ export default {
 
 <style lang="scss" scoped>
 .swiper {
-  height: 300px;
+  height: var(--height);
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   .swiper-slide {
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,14 +83,6 @@ export default {
     font-weight: bold;
     font-size: 14px * 1.3 * 2;
     background-color: #fcfaed;
-  }
-}
-.swiper {
-  height: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  .swiper-slide {
-    height: 200px;
   }
 }
 </style>

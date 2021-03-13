@@ -1,7 +1,7 @@
 <template>
   <v-row align="center" justify="center">
     <v-spacer />
-    <v-col cols="8" >
+    <v-col :cols="columns" >
         <v-img
         class="white--text"
         max-height="374"
@@ -16,7 +16,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["columns"]
+};
 </script>
 
 <style lang="css">

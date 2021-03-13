@@ -1,7 +1,7 @@
 <template>
   <v-row align="center" justify="center">
     <v-spacer />
-    <v-col cols="8" style="background: #e8e2d2">
+    <v-col :cols="columns" style="background: #e8e2d2">
       <v-row align="center" justify="left">
         <v-col cols="8"> Contact: </v-col>
       </v-row>
@@ -17,7 +17,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["columns"],
+};
 </script>
 
 <style lang="css"></style>
