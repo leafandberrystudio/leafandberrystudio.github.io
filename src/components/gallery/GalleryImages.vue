@@ -68,9 +68,8 @@ export default {
 
 <style lang="scss" scoped>
 .swiper {
-//   height: 300px;
+  height: 300px;
   width: 100%;
-
   .swiper-slide {
     display: flex;
     justify-content: center;
@@ -81,12 +80,10 @@ export default {
     background-color: #fcfaed;
   }
 }
-
 .swiper {
-//   height: 430px;
+  height: 500px;
   margin-left: auto;
   margin-right: auto;
-
   .swiper-slide {
     height: 200px;
   }

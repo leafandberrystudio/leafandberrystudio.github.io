@@ -3,7 +3,7 @@
   <v-container fill-height fluid>
     <gallery-header :title="galleryItem.title" :subtitle="galleryItem.subtitle" />
     <gallery-description :description="galleryItem.description" />
-    <gallery-images :images="galleryItem.images" />
+    <gallery-images :images="galleryItem.images" rows="2" />
   </v-container>
 </template>
 
